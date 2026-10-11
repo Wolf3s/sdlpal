@@ -135,7 +135,7 @@
 #  define FPM_64BIT   1
 #elif defined(__arm__)
 #  define FPM_DEFAULT 1
-#elif defined(__mips__)
+#elif defined(__mips__) && !defined(PSP)
 #  define FPM_MIPS    1
 #elif defined(__sparc__)
 #  define FPM_SPARC   1

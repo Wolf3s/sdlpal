@@ -101,6 +101,12 @@ ipch/
 *.vsp
 *.vspx
 
+# PSP temp and executable files
+psp/*.PBP
+psp/*.SFO
+psp/*.elf
+psp/*.prx
+
 # TFS 2012 Local Workspace
 $tf/
 

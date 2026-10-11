@@ -560,11 +560,12 @@ MidiSong *Timidity_LoadSong(SDL_RWops *rw, SDL_AudioSpec *audio)
 	  return NULL;
   }
 
+#ifndef PSP
   uint32_t samples = gConfig.wAudioBufferSize;
   song->buffer_size = samples;
   song->resample_buffer = safe_malloc(samples * sizeof(sample_t));
   song->common_buffer = safe_malloc(samples * 2 * sizeof(Sint32));
-  
+#endif
   song->control_ratio = audio->freq / CONTROLS_PER_SECOND;
   if (song->control_ratio < 1)
       song->control_ratio = 1;
